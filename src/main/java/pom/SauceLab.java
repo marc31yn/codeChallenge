@@ -16,11 +16,9 @@ import java.util.Map;
 
 public class SauceLab {
 
-    public static final String USERNAME = "oauth-marc3lyn-bd7b8";
-    public static final String ACCESS_KEY = "437f9629-3269-4655-a69a-dc5f7fa1537c";
+    public static final String USERNAME = "melopez";
+    public static final String ACCESS_KEY = "8987df4e-de0f-4cb4-9a09-bd7a7cf845fa";
     public static List<String> tags = Arrays.asList("automationTrainee", "CodeChallenge", "Selenium","TestNG", "javaTest");
-
-    public static String appSummary = "Testing Application Summary";
 
 
     public static WebDriver chromeSetUp(String testName) throws MalformedURLException {
