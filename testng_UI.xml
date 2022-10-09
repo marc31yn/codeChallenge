@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Code Challenge - UI Test Suite" >
+
+    <parameter name="browser" value="chrome"></parameter>
+
+    <test name="User Story 1" enabled="true">
+        <parameter name="testName" value="User_Story_1"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="login"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="User Story 2" enabled="true">
+        <parameter name="testName" value="User_Story_2"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="wrongCredencials"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="User Story 3" enabled="true">
+        <parameter name="testName" value="User_Story_3"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="login"></include>
+                </methods>
+            </class>
+            <class name="test.Inventory_Test">
+                    <methods>
+                        <include name="homePage"></include>
+                        <include name="addItemToCart"></include>
+                        <include name="goToCart"></include>
+                        <include name="removeItemToCart"></include>
+                    </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="User Story 4" enabled="true">
+        <parameter name="testName" value="User_Story_4"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="login"></include>
+                </methods>
+            </class>
+            <class name="test.Inventory_Test">
+                <methods>
+                    <include name="homePage"></include>
+                    <include name="addItemToCart"></include>
+                    <include name="goToCart"></include>
+                    <include name="goToCheckout"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="User Story 5" enabled="true">
+        <parameter name="testName" value="User_Story_5"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="login"></include>
+                </methods>
+            </class>
+            <class name="test.Inventory_Test">
+                <methods>
+                    <include name="homePage"></include>
+                    <include name="goToAbout"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="User Story 6" enabled="true">
+        <parameter name="testName" value="User_Story_6"></parameter>
+        <classes>
+            <class name="test.Login_Test">
+                <methods>
+                    <include name="login"></include>
+                </methods>
+            </class>
+            <class name="test.Inventory_Test" >
+                <methods>
+                    <include name="homePage"></include>
+                    <include name="goToFooter"></include>
+                    <include name="socialNetwork"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+
+</suite>

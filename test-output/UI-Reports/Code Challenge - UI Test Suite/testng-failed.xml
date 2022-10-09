@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Code Challenge - UI Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="User Story 2(failed)">
+    <parameter name="testName" value="User_Story_2"/>
+    <classes>
+      <class name="test.Login_Test">
+        <methods>
+          <include name="loginPage"/>
+          <include name="openBrowser"/>
+          <include name="wrongCredencials"/>
+          <include name="closeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.Login_Test -->
+    </classes>
+  </test> <!-- User Story 2(failed) -->
+</suite> <!-- Failed suite [Code Challenge - UI Test Suite] -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Code Challenge - API Test Suite" parallel="tests" thread-count="1">
+
+    <test name="First Section" enabled="true">
+        <classes>
+            <class name="test.ActivityApi_Test"></class>
+        </classes>
+    </test>
+
+    <test name="Second Section" enabled="true">
+        <classes>
+            <class name="test.BookApi_Test">
+                <methods>
+                    <include name="books_get"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Third Section" enabled="true">
+        <classes>
+            <class name="test.BookApi_Test">
+                <methods>
+                    <include name="covertPhotos_get"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
