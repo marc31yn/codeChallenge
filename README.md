@@ -17,7 +17,8 @@ In This project there two test suit:
 - GIT
 - Integration with Saucelabs
 - Integration with Jenkins 
-## Acknowledgements
+
+## Documentation
 
  - [Selenium Documentation](https://www.selenium.dev/documentation/)
  - [Rest Assured](https://rest-assured.io/)
