@@ -47,7 +47,7 @@ public class BookApi_Test {
                 .spec(specHeader)
                 .when().get(resource_get)
                 .then()
-                .log().all()
+//                .log().all()
                 .assertThat().statusCode(200)
                 .body(matchesJsonSchema(schema));
 
