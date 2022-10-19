@@ -44,15 +44,6 @@ public class BookApi_Test {
 
         File schema = new File(System.getProperty("user.dir")+"\\src\\main\\java\\files\\schemaBook.json");
 
-//        given()
-////                .log().all()
-//                .spec(specHeader)
-//                .when().get(resource_get)
-//                .then()
-////                .log().all()
-//                .assertThat().statusCode(200)
-//                .body(matchesJsonSchema(schema));
-
         Response response = given()
                 .spec(specHeader)
                 .when().get(resource_get)
@@ -69,10 +60,6 @@ public class BookApi_Test {
         for(Header header : allHeaders) {
             System.out.println("Key: " + header.getName() + " Value: " + header.getValue());
         }
-
-
-
-
 
     }
 
