@@ -18,6 +18,9 @@ public class SauceLab {
 
     public static final String USERNAME = "oauth-lopezmarcela0994-02492";
     public static final String ACCESS_KEY = "f847965e-cbad-4400-b372-e97bc3cc5bca";
+
+    public static final String BUIL_VALUE = "1.0-UI Test";
+    public static final String SELENIUM_VERSION = "4.3.0";
     public static List<String> tags = Arrays.asList("automationTrainee", "CodeChallenge", "Selenium","TestNG", "javaTest");
 
 
@@ -30,11 +33,10 @@ public class SauceLab {
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
         sauceOptions.put("name", testName+"_Chrome");
-        sauceOptions.put("build","1.0-UI Test");
+        sauceOptions.put("build",BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);
-        sauceOptions.put("seleniumVersion", "4.3.0");
-        sauceOptions.put("extendedDebugging", "true");
+        sauceOptions.put("seleniumVersion", SELENIUM_VERSION);
         sauceOptions.put("capturePerformance", "true");
         sauceOptions.put("extendedDebugging", "true");
 
@@ -52,11 +54,10 @@ public class SauceLab {
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
         sauceOptions.put("name", testName+"_Firefox");
-        sauceOptions.put("build","1.0-UI Test");
+        sauceOptions.put("build",BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);
-        sauceOptions.put("seleniumVersion", "4.3.0");
-        sauceOptions.put("extendedDebugging", "true");
+        sauceOptions.put("seleniumVersion", SELENIUM_VERSION);
         sauceOptions.put("capturePerformance", "true");
         sauceOptions.put("extendedDebugging", "true");
 
@@ -74,11 +75,10 @@ public class SauceLab {
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
         sauceOptions.put("name", testName+"_Edge");
-        sauceOptions.put("build","1.0-UI Test");
+        sauceOptions.put("build", BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);
-        sauceOptions.put("seleniumVersion", "4.3.0");
-        sauceOptions.put("extendedDebugging", "true");
+        sauceOptions.put("seleniumVersion", SELENIUM_VERSION);
         sauceOptions.put("capturePerformance", "true");
         sauceOptions.put("extendedDebugging", "true");
 
