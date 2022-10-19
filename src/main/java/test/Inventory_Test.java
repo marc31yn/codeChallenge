@@ -155,24 +155,6 @@ public class Inventory_Test {
 
         SoftAssert sa = new SoftAssert();
 
-
-//        // Store all currently open tabs in tabs
-//        ArrayList<String> tabs = new ArrayList<String>(inventory.getIdWindows());
-//
-////        Verify Twitter
-//        inventory.switchTo(tabs.get(3));
-//        System.out.println("The current url: " + inventory.getURL());
-////        Verify Facebook
-//        inventory.switchTo(tabs.get(2));
-//        System.out.println("The current url: " + inventory.getURL());
-////        Verify Linkedin
-//        inventory.switchTo(tabs.get(1));
-//        System.out.println("The current url: " + inventory.getURL());//
-//
-//        inventory.switchTo(homePageTab);
-//        System.out.println("The current url: " + inventory.getURL());
-
-
         //Loop through tabs
         for (String windowHandle : inventory.getIdWindows()) {
             inventory.switchTo(windowHandle);
@@ -193,12 +175,7 @@ public class Inventory_Test {
 
         sa.assertAll("Verify the social Networks, asserts");
 
-
-
-
-
     }
-
 
 
 }

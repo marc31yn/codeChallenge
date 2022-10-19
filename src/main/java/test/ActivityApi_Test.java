@@ -33,7 +33,7 @@ public class ActivityApi_Test {
     }
 
     @Test(enabled = true)
-    public void activities_get(){
+    public void activities_get() {
 
         System.out.println("---- First Section: T07 Verify the Activities endpoint - GET ----");
 
@@ -54,41 +54,40 @@ public class ActivityApi_Test {
         // Retrieve the body of the Response
         ResponseBody body = response.getBody();
         String bodyString = body.asString();
-//        System.out.println("Response Body is: " + bodyString);
 
         // For parsing jsPathON
         JsonPath jsPath = new JsonPath(bodyString);
 
         idsList = jsPath.getList("id");
-        System.out.println("ID’s: "+idsList);
+        System.out.println("ID’s: " + idsList);
 
 //        Iterate the jsPath, to check the data response
 //        for (int i = 0; i < idsList.size(); i++) {
 //            System.out.println(jsPath.getInt("["+i+"].id"));
 //        }
 
-     }
+    }
 
-     @Test(dataProvider = "ActivitiesData", enabled = true)
-    public void activities_post(Integer idAct, String titleAct){
+    @Test(dataProvider = "ActivitiesData", enabled = true)
+    public void activities_post(Integer idAct, String titleAct) {
 
-         System.out.println("---- First Section: T08 Verify the Activities endpoint - POST ----");
+        System.out.println("---- First Section: T08 Verify the Activities endpoint - POST ----");
 
-         String resource_post = "api/v1/Activities";
+        String resource_post = "api/v1/Activities";
 
-         Response response = given()
+        Response response = given()
 //                 .log().all()
-                 .spec(specHeader)
-                 .body(Payload.addActivity(idAct,titleAct))
-                 .when().post(resource_post)
-                 .then()
+                .spec(specHeader)
+                .body(Payload.addActivity(idAct, titleAct))
+                .when().post(resource_post)
+                .then()
                 .log().all()
-                 .extract().response();
+                .extract().response();
 
-         System.out.println("---------------------------------------------------------------");
-         System.out.println("** The status code: " + response.statusCode());
-         Assert.assertEquals(response.statusCode(), 200, "Verify the status code");
-         System.out.println("---------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("** The status code: " + response.statusCode());
+        Assert.assertEquals(response.statusCode(), 200, "Verify the status code");
+        System.out.println("---------------------------------------------------------------");
 
 //         Post with the ids List values, saved on activities_get Method
 //         for (int id: idsList ) {
@@ -109,34 +108,33 @@ public class ActivityApi_Test {
 //
 //         }
 
-     }
+    }
 
-     @Test(dependsOnMethods = {"activities_get"}, enabled = true)
-     public void activitiesID_get(){
+    @Test(dependsOnMethods = {"activities_get"}, enabled = true)
+    public void activitiesID_get() {
 
-         System.out.println("---- First Section: T09 Verify the Activities ID endpoint – GET ----");
+        System.out.println("---- First Section: T09 Verify the Activities ID endpoint – GET ----");
 
-         int valueIndex = randomNum(0, idsList.size()-1);
-//         System.out.println("Random index value: "+ valueIndex);
-         int idRandom = idsList.get(valueIndex);
-         System.out.println("Random id value: "+ idRandom);
+        int valueIndex = randomNum(0, idsList.size() - 1);
+        int idRandom = idsList.get(valueIndex);
+        System.out.println("Random id value: " + idRandom);
 
-         String resource_get = "/api/v1/Activities/{id}";
+        String resource_get = "/api/v1/Activities/{id}";
 
-         Response response = given()
+        Response response = given()
 //                 .log().all()
-                 .spec(specHeader)
-                 .when().get(resource_get,idRandom)
-                 .then()
+                .spec(specHeader)
+                .when().get(resource_get, idRandom)
+                .then()
                 .log().all()
-                 .extract().response();
+                .extract().response();
 
-         System.out.println("---------------------------------------------------------------");
-         System.out.println("** The status code: " + response.statusCode());
-         Assert.assertEquals(response.statusCode(), 200, "Verify the status code");
-         System.out.println("---------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("** The status code: " + response.statusCode());
+        Assert.assertEquals(response.statusCode(), 200, "Verify the status code");
+        System.out.println("---------------------------------------------------------------");
 
-     }
+    }
 
     @DataProvider(name = "ActivitiesData")
     public Object[][] getData() {

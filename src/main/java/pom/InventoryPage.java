@@ -58,12 +58,12 @@ public class InventoryPage extends Base {
     @FindBy(xpath = "//a[contains(text(),'LinkedIn')]")
     public WebElement iconLinkedin;
 
-    public InventoryPage(WebDriver driver){
+    public InventoryPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public void addToCart(Integer amountItem){
+    public void addToCart(Integer amountItem) {
         List<WebElement> itemList = findElements(btnAddCartItem);
         List<WebElement> itemListNames = findElements(labelAddCartItem);
         List<WebElement> itemListPrice = findElements(priceItems);
@@ -80,21 +80,20 @@ public class InventoryPage extends Base {
             pricesSelected.add(itemListPrice.get(i).getText());
         }
 
-//        iconCart.click();
     }
 
-    public void addToCart2(String nameItem){
-        WebElement element = findElement(By.xpath("//button[@id='add-to-cart-"+nameItem+"']"));
+    public void addToCart2(String nameItem) {
+        WebElement element = findElement(By.xpath("//button[@id='add-to-cart-" + nameItem + "']"));
         element.click();
     }
 
-    public void removeToCart(String nameItem){
-        WebElement element = findElement(By.xpath("//button[@id='remove-"+nameItem+"']"));
+    public void removeToCart(String nameItem) {
+        WebElement element = findElement(By.xpath("//button[@id='remove-" + nameItem + "']"));
         waitisVisible(element);
         element.click();
     }
 
-    public void fillCheckOutForm(String firstName, String lastName, String postalCode){
+    public void fillCheckOutForm(String firstName, String lastName, String postalCode) {
 
         txtFirstName.clear();
         txtFirstName.sendKeys(firstName);

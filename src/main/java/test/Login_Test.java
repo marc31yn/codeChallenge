@@ -46,7 +46,6 @@ public class Login_Test {
                 throw new AssertionError();
         }
 
-//        driver = SauceLab.chromeSetUp(testName);
     }
 
     @AfterTest(enabled = true)

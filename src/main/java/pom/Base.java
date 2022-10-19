@@ -14,7 +14,7 @@ public class Base {
 
     private WebDriver driver;
 
-    public Base(WebDriver driver){
+    public Base(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -22,69 +22,70 @@ public class Base {
         return driver.findElement(locator);
     }
 
-    public List<WebElement> findElements(By locator){
+    public List<WebElement> findElements(By locator) {
         return driver.findElements(locator);
     }
 
-    public void visit(String url){
+    public void visit(String url) {
         driver.navigate().to(url);
     }
 
-    public void goBack(){
+    public void goBack() {
         driver.navigate().back();
     }
 
-    public String getURL(){
+    public String getURL() {
         return driver.getCurrentUrl();
     }
 
-    public void maxiBrowser(){
+    public void maxiBrowser() {
         driver.manage().window().maximize();
     }
 
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 
-    public void closeTab(){
+    public void closeTab() {
         driver.close();
     }
 
-    public int countOpenTab(){
+    public int countOpenTab() {
         return driver.getWindowHandles().size();
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return driver.getTitle();
     }
 
-    public void switchTo(String idWindow){
+    public void switchTo(String idWindow) {
         driver.switchTo().window(idWindow);
     }
 
 
-    public Set<String> getIdWindows(){
+    public Set<String> getIdWindows() {
         return driver.getWindowHandles();
     }
 
-    public void waitisVisible(WebElement element){
+    public void waitisVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    public void scrollToItem(WebElement element){
+
+    public void scrollToItem(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void click(WebElement item){
+    public void click(WebElement item) {
         item.click();
     }
 
-    public String getIdWindow(){
+    public String getIdWindow() {
         return driver.getWindowHandle();
     }
 
-    public void typeText(String inputText, WebElement item){
+    public void typeText(String inputText, WebElement item) {
         item.sendKeys(inputText);
     }
 

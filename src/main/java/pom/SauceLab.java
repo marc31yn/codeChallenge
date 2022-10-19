@@ -21,7 +21,7 @@ public class SauceLab {
 
     public static final String BUIL_VALUE = "1.0-UI Test";
     public static final String SELENIUM_VERSION = "4.3.0";
-    public static List<String> tags = Arrays.asList("automationTrainee", "CodeChallenge", "Selenium","TestNG", "javaTest");
+    public static List<String> tags = Arrays.asList("automationTrainee", "CodeChallenge", "Selenium", "TestNG", "javaTest");
 
 
     public static WebDriver chromeSetUp(String testName) throws MalformedURLException {
@@ -32,8 +32,8 @@ public class SauceLab {
         Map<String, Object> sauceOptions = new HashMap<>();
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
-        sauceOptions.put("name", testName+"_Chrome");
-        sauceOptions.put("build",BUIL_VALUE);
+        sauceOptions.put("name", testName + "_Chrome");
+        sauceOptions.put("build", BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);
         sauceOptions.put("seleniumVersion", SELENIUM_VERSION);
@@ -53,8 +53,8 @@ public class SauceLab {
         Map<String, Object> sauceOptions = new HashMap<>();
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
-        sauceOptions.put("name", testName+"_Firefox");
-        sauceOptions.put("build",BUIL_VALUE);
+        sauceOptions.put("name", testName + "_Firefox");
+        sauceOptions.put("build", BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);
         sauceOptions.put("seleniumVersion", SELENIUM_VERSION);
@@ -74,7 +74,7 @@ public class SauceLab {
         Map<String, Object> sauceOptions = new HashMap<>();
         sauceOptions.put("username", USERNAME);
         sauceOptions.put("accessKey", ACCESS_KEY);
-        sauceOptions.put("name", testName+"_Edge");
+        sauceOptions.put("name", testName + "_Edge");
         sauceOptions.put("build", BUIL_VALUE);
         sauceOptions.put("screenResolution", "1920x1080");
         sauceOptions.put("tags", tags);

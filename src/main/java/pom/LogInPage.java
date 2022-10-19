@@ -22,12 +22,12 @@ public class LogInPage extends Base {
     @FindBy(xpath = "//h3[contains(text(),'Epic sadface:')]")
     public WebElement txtAlertError;
 
-    public LogInPage(WebDriver driver){
+    public LogInPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public void userLogin(String username, String password){
+    public void userLogin(String username, String password) {
         txtUser.clear();
         typeText(username, txtUser);
         txtPss.clear();
