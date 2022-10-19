@@ -16,8 +16,8 @@ import java.util.Map;
 
 public class SauceLab {
 
-    public static final String USERNAME = "melopez";
-    public static final String ACCESS_KEY = "8987df4e-de0f-4cb4-9a09-bd7a7cf845fa";
+    public static final String USERNAME = "oauth-lopezmarcela0994-02492";
+    public static final String ACCESS_KEY = "f847965e-cbad-4400-b372-e97bc3cc5bca";
     public static List<String> tags = Arrays.asList("automationTrainee", "CodeChallenge", "Selenium","TestNG", "javaTest");
 
 
