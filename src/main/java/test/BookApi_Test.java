@@ -56,7 +56,7 @@ public class BookApi_Test {
     @Test
     public void covertPhotos_get(){
 
-        System.out.println("---- Second Section: T11 Verify the CoverPhoto endpoint – GET ----");
+        System.out.println("---- Third Section: T11 Verify the CoverPhoto endpoint – GET ----");
 
         String resource_get = "api/v1/CoverPhotos";
 
