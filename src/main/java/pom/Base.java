@@ -46,8 +46,6 @@ public class Base {
         driver.quit();
     }
 
-
-
     public void closeTab(){
         driver.close();
     }
@@ -64,9 +62,6 @@ public class Base {
         driver.switchTo().window(idWindow);
     }
 
-    public void newTab(){
-        driver.switchTo().newWindow(WindowType.TAB);
-    }
 
     public Set<String> getIdWindows(){
         return driver.getWindowHandles();
@@ -76,61 +71,9 @@ public class Base {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-
-    public void waitisVisible(By locator){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
-    }
-
-
-
     public void scrollToItem(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
-    }
-
-    public void numberOfWindowsToBe(int windowCount){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.numberOfWindowsToBe(windowCount));
-    }
-
-    public void waitalertIsPresent(int seconds){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.alertIsPresent());
-    }
-
-    public Alert waitalerVerify(int seconds){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        return wait.until(ExpectedConditions.alertIsPresent());
-    }
-
-    public void hoverClick(By locator){
-        Actions builder = new Actions(driver);
-        builder.moveToElement(findElement(locator))
-                .click()
-                .build()
-                .perform();
-    }
-
-    public void hover(WebElement element){
-        Actions builder = new Actions(driver);
-        builder.moveToElement(element).perform();
-    }
-
-    public WebElement getItemList(List<WebElement> list, int position){
-        return list.get(position);
-    }
-
-    public String getText(By locator){
-        return findElement(locator).getText();
-    }
-
-    public String getHref(By locator){
-        return findElement(locator).getAttribute("href");
-    }
-
-    public void submitAction(By locator){
-        findElement(locator).submit();
     }
 
     public void click(WebElement item){
@@ -143,32 +86,6 @@ public class Base {
 
     public void typeText(String inputText, WebElement item){
         item.sendKeys(inputText);
-    }
-
-    public void scrollIntoViewJS(By locator){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", findElement(locator));
-    }
-
-
-    public String getPlaceholder(By locator){
-        return findElement(locator).getAttribute("placeholder");
-    }
-
-    public String getValue(WebElement element){
-        return element.getAttribute("value");
-    }
-
-
-    public List<WebElement> getDropdownList(By locator){
-
-        Select drpOption = new Select(findElement(locator));
-        return drpOption.getOptions();
-    }
-
-    public void selectByText(By locator, String text){
-        Select drpOption = new Select(findElement(locator));
-        drpOption.selectByVisibleText(text);
     }
 
 }

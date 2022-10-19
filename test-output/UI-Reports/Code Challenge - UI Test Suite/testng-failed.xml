@@ -2,18 +2,57 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Code Challenge - UI Test Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
-  <test thread-count="5" name="User Story 2(failed)">
-    <parameter name="testName" value="User_Story_2"/>
+  <test thread-count="5" name="User Story 3(failed)">
+    <parameter name="testName" value="User_Story_3"/>
     <classes>
-      <class name="test.Login_Test">
+      <class name="test.Inventory_Test">
         <methods>
-          <include name="loginPage"/>
-          <include name="openBrowser"/>
-          <include name="wrongCredencials"/>
-          <include name="closeBrowser"/>
+          <include name="removeItemToCart"/>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="goToCart"/>
+          <include name="addItemToCart"/>
+        </methods>
+      </class> <!-- test.Inventory_Test -->
+    </classes>
+  </test> <!-- User Story 3(failed) -->
+  <test thread-count="5" name="User Story 4(failed)">
+    <parameter name="testName" value="User_Story_4"/>
+    <classes>
+      <class name="test.Inventory_Test">
+        <methods>
+          <include name="setUP"/>
+          <include name="goToCart"/>
+          <include name="tearDown"/>
+          <include name="addItemToCart"/>
+          <include name="goToCheckout"/>
+        </methods>
+      </class> <!-- test.Inventory_Test -->
+    </classes>
+  </test> <!-- User Story 4(failed) -->
+  <test thread-count="5" name="User Story 5(failed)">
+    <parameter name="testName" value="User_Story_5"/>
+    <classes>
+      <class name="test.Inventory_Test">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="goToAbout"/>
+        </methods>
+      </class> <!-- test.Inventory_Test -->
+    </classes>
+  </test> <!-- User Story 5(failed) -->
+  <test thread-count="5" name="User Story 6(failed)">
+    <parameter name="testName" value="User_Story_6"/>
+    <classes>
+      <class name="test.Inventory_Test">
+        <methods>
+          <include name="socialNetwork"/>
+          <include name="goToFooter"/>
+          <include name="setUP"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- test.Login_Test -->
+      </class> <!-- test.Inventory_Test -->
     </classes>
-  </test> <!-- User Story 2(failed) -->
+  </test> <!-- User Story 6(failed) -->
 </suite> <!-- Failed suite [Code Challenge - UI Test Suite] -->
