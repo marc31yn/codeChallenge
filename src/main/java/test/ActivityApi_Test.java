@@ -35,6 +35,8 @@ public class ActivityApi_Test {
     @Test(enabled = true)
     public void activities_get(){
 
+        System.out.println("---- First Section: T07 Verify the Activities endpoint - GET ----");
+
         String resource_get = "api/v1/Activities";
 
         Response response = given()
@@ -69,6 +71,8 @@ public class ActivityApi_Test {
 
      @Test(dataProvider = "ActivitiesData", enabled = true)
     public void activities_post(Integer idAct, String titleAct){
+
+         System.out.println("---- First Section: T08 Verify the Activities endpoint - POST ----");
 
          String resource_post = "api/v1/Activities";
 
@@ -109,6 +113,8 @@ public class ActivityApi_Test {
 
      @Test(dependsOnMethods = {"activities_get"}, enabled = true)
      public void activitiesID_get(){
+
+         System.out.println("---- First Section: T09 Verify the Activities ID endpoint – GET ----");
 
          int valueIndex = randomNum(0, idsList.size()-1);
 //         System.out.println("Random index value: "+ valueIndex);

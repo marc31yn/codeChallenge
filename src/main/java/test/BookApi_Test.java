@@ -34,6 +34,8 @@ public class BookApi_Test {
     @Test(enabled = true)
     public void books_get(){
 
+        System.out.println("---- Second Section: T10 Verify the Schema Book endpoint – GET ----");
+
         String resource_get = "api/v1/Books";
 
         System.out.println("-------------------------- SCHEMA VALIDATION -------------------------------------");
@@ -53,6 +55,8 @@ public class BookApi_Test {
 
     @Test
     public void covertPhotos_get(){
+
+        System.out.println("---- Second Section: T11 Verify the CoverPhoto endpoint – GET ----");
 
         String resource_get = "api/v1/CoverPhotos";
 
