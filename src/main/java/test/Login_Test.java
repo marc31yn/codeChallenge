@@ -83,6 +83,7 @@ public class Login_Test {
         login.userLogin("user1","123");
         login.waitisVisible(login.txtAlertError);
         Assert.assertTrue(login.txtAlertError.isDisplayed());
+
         if(login.txtAlertError.isDisplayed()){
             System.out.println("Error message alert: " + login.txtAlertError.getText());
         }
