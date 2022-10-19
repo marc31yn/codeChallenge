@@ -2,6 +2,8 @@ package test;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
@@ -40,16 +42,37 @@ public class BookApi_Test {
 
         System.out.println("-------------------------- SCHEMA VALIDATION -------------------------------------");
 
-        File schema = new File(System.getProperty("user.dir")+"\\src\\main\\java\\files\\schemaBook.json");
+        File schema = new File(System.getProperty("user.dir")+"\\src\\main\\java\\files\\schemaInvalid.json");
 
-        given()
-                .log().all()
+//        given()
+////                .log().all()
+//                .spec(specHeader)
+//                .when().get(resource_get)
+//                .then()
+////                .log().all()
+//                .assertThat().statusCode(200)
+//                .body(matchesJsonSchema(schema));
+
+        Response response = given()
                 .spec(specHeader)
                 .when().get(resource_get)
                 .then()
 //                .log().all()
                 .assertThat().statusCode(200)
-                .body(matchesJsonSchema(schema));
+                .body(matchesJsonSchema(schema))
+                .extract().response();
+
+        System.out.println("-------------------------- Printing response headers -----------------------------");
+
+        Headers allHeaders = response.headers();
+        // Iterate over all the Headers
+        for(Header header : allHeaders) {
+            System.out.println("Key: " + header.getName() + " Value: " + header.getValue());
+        }
+
+
+
+
 
     }
 
