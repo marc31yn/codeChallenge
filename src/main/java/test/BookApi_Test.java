@@ -42,7 +42,7 @@ public class BookApi_Test {
 
         System.out.println("-------------------------- SCHEMA VALIDATION -------------------------------------");
 
-        File schema = new File(System.getProperty("user.dir")+"\\src\\main\\java\\files\\schemaInvalid.json");
+        File schema = new File(System.getProperty("user.dir")+"\\src\\main\\java\\files\\schemaBook.json");
 
 //        given()
 ////                .log().all()
