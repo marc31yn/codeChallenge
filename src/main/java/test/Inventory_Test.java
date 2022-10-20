@@ -97,7 +97,7 @@ public class Inventory_Test {
         Assert.assertEquals(inventory.getURL(),"https://www.saucedemo.com/checkout-step-two.html","Validate that is the Checkout Step two Page");
 
         System.out.println("Amount of items on the cart: "+inventory.iconCart.getText());
-        sa.assertEquals(inventory.iconCart.getText(), "5","Verify the amount of items on the Cart, it should be 4");
+        sa.assertEquals(inventory.iconCart.getText(), "4","Verify the amount of items on the Cart, it should be 4");
         inventory.btnFinish.click();
 
         sa.assertAll("Verify the item amount before finish checkout, asserts");
